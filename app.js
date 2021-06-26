@@ -22,7 +22,7 @@ const reviewRoutes = require('./routes/reviews');
 const MongoDBStore = require("connect-mongodb-session")(session);
 
 const dbUrl = process.env.DB_URL;
-
+console.log(dbUrl);
 
 mongoose.connect(dbUrl, {
     useNewUrlParser: true,
