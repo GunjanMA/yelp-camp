@@ -52,7 +52,7 @@ app.use(mongoSanitize({
 const secret = process.env.SECRET || 'thisshouldbeabettersecret!';  
 
 const store = new MongoDBStore({
-    url: dbUrl,
+    url: process.env.DB_URL,
     secret,
     touchAfter: 24 * 60 * 60
 });
